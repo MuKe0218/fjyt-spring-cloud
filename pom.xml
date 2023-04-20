@@ -11,6 +11,8 @@
     <modules>
         <module>fjyt-gateway</module>
         <module>fjyt-system</module>
+        <module>fjyt-auth</module>
+        <module>fjyt-common</module>
     </modules>
 
     <description>fjyt微服务系统</description>
@@ -30,6 +32,11 @@
         <poi.version>4.1.2</poi.version>
         <fastjson.version>2.0.25</fastjson.version>
         <lombok.version>1.18.26</lombok.version>
+        <fjyt-common.version>1.0</fjyt-common.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <transmittable-thread-local.version>2.14.2</transmittable-thread-local.version>
+        <commons.io.version>2.11.0</commons.io.version>
+        <druid.version>1.2.16</druid.version>
     </properties>
     <!--以依赖管理-->
     <dependencyManagement>
@@ -99,6 +106,35 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <!-- JWT -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <!-- 线程传递值 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fjyt</groupId>
+                <artifactId>fjyt-common</artifactId>
+                <version>${fjyt-common.version}</version>
+            </dependency>
+            <!-- io常用工具类 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+            <!-- druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

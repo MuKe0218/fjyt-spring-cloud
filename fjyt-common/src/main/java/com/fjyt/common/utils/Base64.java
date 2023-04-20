@@ -1,4 +1,4 @@
-package com.fjyt.system.utils;
+package com.fjyt.common.utils;
 
 /**
  * Base64工具类

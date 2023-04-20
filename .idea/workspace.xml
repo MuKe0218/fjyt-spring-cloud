@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee837043-1f4a-44d2-93c8-fad09686da9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/R.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../muke_take_out/src/main/java/com/mukework/muke/common/JacksonObjectMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.babelrc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.editorconfig" beforeDir="false" />
@@ -23,6 +24,13 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/common/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/KaptchaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/KaptchaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/utils/Base64.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/utils/Base64.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/common/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/KaptchaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/KaptchaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/utils/Base64.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
@@ -74,34 +82,43 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springcloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitProject\fjyt-spring-cloud\fjyt-auth\src\main\resources" />
       <recent name="D:\GitProject\fjyt-spring-cloud\fjyt-system\src\main\resources" />
       <recent name="D:\GitProject\fjyt-spring-cloud\fjyt-gateway\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fjyt.common.utils" />
+      <recent name="com.fjyt.common.utils.uuid" />
+      <recent name="com.fjyt.auth.utils" />
+      <recent name="com.fjyt.auth.common" />
       <recent name="com.fjyt.system.utils" />
-      <recent name="com.fjyt.system.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SystemApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="Spring Boot.AuthApplication">
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="fjyt-auth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fjyt.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fjyt.auth.AuthApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,6 +151,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.SystemApplication" />
         <item itemvalue="Spring Boot.GateWayApplication" />
       </list>
@@ -152,7 +170,9 @@
       <workItem from="1681713201991" duration="444000" />
       <workItem from="1681892334645" duration="2219000" />
       <workItem from="1681910773146" duration="562000" />
-      <workItem from="1681956268627" duration="7283000" />
+      <workItem from="1681956268627" duration="12862000" />
+      <workItem from="1681977591058" duration="7147000" />
+      <workItem from="1681986931761" duration="596000" />
     </task>
     <servers />
   </component>
@@ -170,5 +190,20 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/text/StrFormatter.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

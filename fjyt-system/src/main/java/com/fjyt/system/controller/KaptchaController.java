@@ -1,25 +1,23 @@
 package com.fjyt.system.controller;
 
-import com.fjyt.system.common.R;
-import com.fjyt.system.utils.Base64;
+import com.fjyt.common.domain.R;
+import com.fjyt.common.utils.Base64;
+import com.fjyt.common.utils.uuid.IdUtils;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.commons.util.IdUtils;
 import org.springframework.util.FastByteArrayOutputStream;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * @author keQiLong
@@ -55,10 +53,10 @@ public class KaptchaController {
             os.close();
         }
         Map<String,Object> map = new Hashtable();
-        String uuid = UUID.randomUUID().toString();
+        String uuid = IdUtils.simpleUUID();
         map.put("captchaEnabled",true);
         map.put("uuid",uuid);
         map.put("img", Base64.encode(os.toByteArray()));
-        return R.success(map);
+        return R.ok(map,"获取验证码成功");
     }
 }
