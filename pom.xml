@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>fjyt-gateway</module>
+        <module>fjyt-system</module>
     </modules>
 
     <description>fjyt微服务系统</description>
@@ -24,10 +25,11 @@
         <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
         <swagger.fox.version>3.0.0</swagger.fox.version>
         <swagger.core.version>1.6.2</swagger.core.version>
-        <kaptcha.version>2.3.3</kaptcha.version>
+        <kaptcha.version>2.3.2</kaptcha.version>
         <pagehelper.boot.version>1.4.6</pagehelper.boot.version>
         <poi.version>4.1.2</poi.version>
         <fastjson.version>2.0.25</fastjson.version>
+        <lombok.version>1.18.26</lombok.version>
     </properties>
     <!--以依赖管理-->
     <dependencyManagement>
@@ -69,7 +71,7 @@
             </dependency>
             <!-- 验证码 -->
             <dependency>
-                <groupId>pro.fessional</groupId>
+                <groupId>com.github.penggle</groupId>
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha.version}</version>
             </dependency>
@@ -90,6 +92,13 @@
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+<!--            lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
