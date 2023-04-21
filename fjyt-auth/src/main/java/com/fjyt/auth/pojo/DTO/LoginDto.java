@@ -22,4 +22,11 @@ public class LoginDto {
      * 用户密码
      */
     private String password;
+
+    /**
+     * 验证码code
+     */
+    private String code;
+
+
 }

@@ -3,13 +3,16 @@ package com.fjyt.auth.service;
 import com.fjyt.auth.pojo.BO.LoginUserBo;
 import com.fjyt.common.constant.CacheConstants;
 import com.fjyt.common.constant.SecurityConstants;
+import com.fjyt.common.redis.service.RedisService;
 import com.fjyt.common.utils.JwtUtils;
 import com.fjyt.common.utils.ip.IpUtils;
 import com.fjyt.common.utils.uuid.IdUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author keQiLong
@@ -22,6 +25,9 @@ public class TokenService {
     protected static final long MILLIS_MINUTE = 60 * MILLIS_SECOND;
     private final static long expireTime = CacheConstants.EXPIRATION;
     private final static String ACCESS_TOKEN = CacheConstants.LOGIN_TOKEN_KEY;
+
+    @Autowired
+    private RedisService redisService;
     /**
      * 创建令牌
      */
@@ -58,7 +64,7 @@ public class TokenService {
         loginUser.setExpireTime(loginUser.getLoginTime() + expireTime * MILLIS_MINUTE);
         // 根据uuid将loginUser缓存
         String userKey = getTokenKey(loginUser.getToken());
-        // redisService.setCacheObject(userKey, loginUser, expireTime, TimeUnit.MINUTES);
+        redisService.setCacheObject(userKey, loginUser, expireTime, TimeUnit.MINUTES);
     }
     private String getTokenKey(String token)
     {

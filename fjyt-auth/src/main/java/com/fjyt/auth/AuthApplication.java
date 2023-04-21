@@ -2,6 +2,7 @@ package com.fjyt.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author keQiLong
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 认证模块
  */
 @SpringBootApplication
+@ComponentScan(value = "com.fjyt")
 public class AuthApplication {
     public static void main(String[] args) {
         SpringApplication.run(AuthApplication.class,args);
