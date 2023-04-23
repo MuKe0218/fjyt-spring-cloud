@@ -37,6 +37,7 @@
         <transmittable-thread-local.version>2.14.2</transmittable-thread-local.version>
         <commons.io.version>2.11.0</commons.io.version>
         <druid.version>1.2.16</druid.version>
+        <mybatis.version>3.5.13</mybatis.version>
     </properties>
     <!--以依赖管理-->
     <dependencyManagement>
@@ -124,6 +125,16 @@
                 <artifactId>fjyt-common</artifactId>
                 <version>${fjyt-common.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.fjyt</groupId>
+                <artifactId>fjyt-system</artifactId>
+                <version>${fjyt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fjyt</groupId>
+                <artifactId>fjyt-auth</artifactId>
+                <version>${fjyt.version}</version>
+            </dependency>
             <!-- io常用工具类 -->
             <dependency>
                 <groupId>commons-io</groupId>
@@ -135,6 +146,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <!--  mybatis  -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

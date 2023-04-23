@@ -19,4 +19,8 @@ public class GlobalException {
     public R exceptionHandler(ServiceException exception){
         return R.fail(exception.getCode(),exception.getMessage());
     }
+    @ExceptionHandler(CaptchaException.class)
+    public R exceptionHandler(CaptchaException exception){
+        return R.fail(exception.getMessage());
+    }
 }
