@@ -23,32 +23,6 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/AuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/controller/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/controller/TokenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/pojo/BO/LoginUserBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/LoginUserBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/pojo/DO/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/pojo/DTO/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/service/SysLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/service/SysLoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/java/com/fjyt/auth/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/utils/security/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/AuthApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/AuthApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/controller/TokenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/controller/TokenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/pojo/BO/LoginUserBo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/pojo/DO/SysUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/pojo/DTO/LoginDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/service/SysLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/service/SysLoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/com/fjyt/auth/service/TokenService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/exception/GlobalException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-common/target/classes/com/fjyt/common/exception/GlobalException.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/target/classes/com/fjyt/common/exception/GlobalException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-gateway/target/classes/com/fjyt/gateway/GateWayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-gateway/target/classes/com/fjyt/gateway/GateWayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/SystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/SystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/KaptchaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/KaptchaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/SystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/SystemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/config/KaptchaConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/config/KaptchaConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/KaptchaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/KaptchaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -109,7 +83,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../项目/zjjy-module-transport-plan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RuoYi-Cloud" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -137,14 +111,16 @@
       <recent name="com.fjyt.common.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.SystemApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,8 +166,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.SystemApplication" />
+        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.GateWayApplication" />
       </list>
     </recent_temporary>
@@ -216,7 +192,8 @@
       <workItem from="1682212435873" duration="7000" />
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
-      <workItem from="1682236573609" duration="11761000" />
+      <workItem from="1682236573609" duration="12306000" />
+      <workItem from="1682294544439" duration="11117000" />
     </task>
     <servers />
   </component>
