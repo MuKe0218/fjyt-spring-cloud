@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysMenuMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysMenuService.java" afterDir="false" />
@@ -30,8 +31,9 @@
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysMenuMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysMenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysMenuMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysDictTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysDictTypeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysMenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysMenuService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysMenuMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -51,8 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -202,7 +204,7 @@
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
-      <workItem from="1682294544439" duration="22401000" />
+      <workItem from="1682294544439" duration="30435000" />
     </task>
     <servers />
   </component>

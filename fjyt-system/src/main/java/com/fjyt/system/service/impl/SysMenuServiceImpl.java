@@ -2,12 +2,15 @@ package com.fjyt.system.service.impl;
 
 import com.fjyt.common.constant.Constants;
 import com.fjyt.common.constant.UserConstants;
+import com.fjyt.common.domain.SysRole;
 import com.fjyt.common.domain.SysUser;
 import com.fjyt.common.utils.StringUtils;
 import com.fjyt.system.mapper.SysMenuMapper;
+import com.fjyt.system.mapper.SysRoleMapper;
 import com.fjyt.system.pojo.DO.SysMenu;
 import com.fjyt.system.pojo.VO.MetaVo;
 import com.fjyt.system.pojo.VO.RouterVo;
+import com.fjyt.system.pojo.VO.TreeSelect;
 import com.fjyt.system.service.ISysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author keQiLong
@@ -26,6 +30,8 @@ public class SysMenuServiceImpl implements ISysMenuService {
 
     @Autowired
     private SysMenuMapper menuMapper;
+    @Autowired
+    private SysRoleMapper roleMapper;
     /**
      * 根据用户ID查询菜单
      *
@@ -103,6 +109,60 @@ public class SysMenuServiceImpl implements ISysMenuService {
         return routers;
     }
     /**
+     * 构建前端所需要树结构
+     *
+     * @param menus 菜单列表
+     * @return 树结构列表
+     */
+    @Override
+    public List<SysMenu> buildMenuTree(List<SysMenu> menus) {
+        List<SysMenu> returnList = new ArrayList<SysMenu>();
+        List<Long> tempList = menus.stream().map(SysMenu::getMenuId).collect(Collectors.toList());
+        for (Iterator<SysMenu> iterator = menus.iterator(); iterator.hasNext();)
+        {
+            SysMenu menu = (SysMenu) iterator.next();
+            // 如果是顶级节点, 遍历该父节点的所有子节点
+            if (!tempList.contains(menu.getParentId()))
+            {
+                recursionFn(menus, menu);
+                returnList.add(menu);
+            }
+        }
+        if (returnList.isEmpty())
+        {
+            returnList = menus;
+        }
+        return returnList;
+    }
+
+    @Override
+    public List<TreeSelect> buildMenuTreeSelect(List<SysMenu> menus) {
+        List<SysMenu> menuTrees = buildMenuTree(menus);
+        return menuTrees.stream().map(TreeSelect::new).collect(Collectors.toList());
+    }
+    /**
+     * 根据用户查询系统菜单列表
+     *
+     * @param userId 用户ID
+     * @return 菜单列表
+     */
+    @Override
+    public List<SysMenu> selectMenuList(Long userId) {
+        return selectMenuList(new SysMenu(), userId);
+    }
+    /**
+     * 根据角色ID查询菜单树信息
+     *
+     * @param roleId 角色ID
+     * @return 选中菜单列表
+     */
+    @Override
+    public List<Long> selectMenuListByRoleId(Long roleId) {
+        SysRole role = roleMapper.selectRoleById(roleId);
+        return menuMapper.selectMenuListByRoleId(roleId, role.isMenuCheckStrictly());
+    }
+
+    /**
      * 根据用户查询系统菜单列表
      *
      * @param menu 菜单信息
@@ -113,7 +173,7 @@ public class SysMenuServiceImpl implements ISysMenuService {
     public List<SysMenu> selectMenuList(SysMenu menu, Long userId) {
         List<SysMenu> menuList = null;
         // 管理员显示所有菜单信息
-        if (SysUser.isAdmin(userId))    
+        if (SysUser.isAdmin(userId))
         {
             menuList = menuMapper.selectMenuList(menu);
         }

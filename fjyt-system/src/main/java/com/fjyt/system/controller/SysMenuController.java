@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author keQiLong
@@ -40,6 +42,19 @@ public class SysMenuController {
         Long userId = SecurityUtils.getUserId();
         List<SysMenu> menus = sysMenuService.selectMenuList(menu, userId);
         return R.ok(menus);
+    }
+    /**
+     * 加载对应角色菜单列表树
+     */
+    @GetMapping(value = "/roleMenuTreeselect/{roleId}")
+    public Map<String,Object> roleMenuTreeselect(@PathVariable("roleId") Long roleId)
+    {
+        Long userId = SecurityUtils.getUserId();
+        List<SysMenu> menus = sysMenuService.selectMenuList(userId);
+        Map<String,Object> map = new Hashtable<String,Object>();
+        map.put("checkedKeys", sysMenuService.selectMenuListByRoleId(roleId));
+        map.put("menus", sysMenuService.buildMenuTreeSelect(menus));
+        return map;
     }
     /**
      * 新增菜单
@@ -94,6 +109,16 @@ public class SysMenuController {
 //            return R.fail("菜单已分配,不允许删除");
 //        }
         return R.ok(sysMenuService.deleteMenuById(menuId));
+    }
+    /**
+     * 获取菜单下拉树列表
+     */
+    @GetMapping("/treeselect")
+    public R treeselect(SysMenu menu)
+    {
+        Long userId = SecurityUtils.getUserId();
+        List<SysMenu> menus = sysMenuService.selectMenuList(menu, userId);
+        return R.ok(sysMenuService.buildMenuTreeSelect(menus));
     }
 
     /**
