@@ -2,8 +2,8 @@ package com.fjyt.system.service.impl;
 
 import com.fjyt.common.constant.Constants;
 import com.fjyt.common.constant.UserConstants;
+import com.fjyt.common.domain.SysUser;
 import com.fjyt.common.utils.StringUtils;
-import com.fjyt.common.utils.security.SecurityUtils;
 import com.fjyt.system.mapper.SysMenuMapper;
 import com.fjyt.system.pojo.DO.SysMenu;
 import com.fjyt.system.pojo.VO.MetaVo;
@@ -101,6 +101,29 @@ public class SysMenuServiceImpl implements ISysMenuService {
             routers.add(router);
         }
         return routers;
+    }
+    /**
+     * 根据用户查询系统菜单列表
+     *
+     * @param menu 菜单信息
+     * @param userId 用户ID
+     * @return 菜单列表
+     */
+    @Override
+    public List<SysMenu> selectMenuList(SysMenu menu, Long userId) {
+        List<SysMenu> menuList = null;
+        System.out.println(userId);
+        // 管理员显示所有菜单信息
+        if (SysUser.isAdmin(userId))
+        {
+            menuList = menuMapper.selectMenuList(menu);
+        }
+        else
+        {
+            menu.getParams().put("userId", userId);
+            menuList = menuMapper.selectMenuListByUserId(menu);
+        }
+        return menuList;
     }
 
     /**

@@ -20,11 +20,11 @@
         <result property="status"         column="status"         />
         <result property="perms"          column="perms"          />
         <result property="icon"           column="icon"           />
-<!--        <result property="createBy"       column="create_by"      />-->
-<!--        <result property="createTime"     column="create_time"    />-->
-<!--        <result property="updateTime"     column="update_time"    />-->
-<!--        <result property="updateBy"       column="update_by"      />-->
-<!--        <result property="remark"         column="remark"         />-->
+        <result property="createBy"       column="create_by"      />
+        <result property="createTime"     column="create_time"    />
+        <result property="updateTime"     column="update_time"    />
+        <result property="updateBy"       column="update_by"      />
+        <result property="remark"         column="remark"         />
     </resultMap>
 
     <sql id="selectMenuVo">
@@ -32,7 +32,37 @@
         from sys_menu
     </sql>
 
-
+    <select id="selectMenuList" parameterType="SysMenu" resultMap="SysMenuResult">
+        <include refid="selectMenuVo"/>
+        <where>
+            <if test="menuName != null and menuName != ''">
+                AND menu_name like concat('%', #{menuName}, '%')
+            </if>
+            <if test="visible != null and visible != ''">
+                AND visible = #{visible}
+            </if>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+        </where>
+        order by parent_id, order_num
+    </select>
+    <select id="selectMenuListByUserId" parameterType="SysMenu" resultMap="SysMenuResult">
+        select distinct m.menu_id, m.parent_id, m.menu_name, m.path, m.component, m.`query`, m.visible, m.status, ifnull(m.perms,'') as perms, m.is_frame, m.is_cache, m.menu_type, m.icon, m.order_num, m.create_time
+        from sys_menu m
+        <where>
+            <if test="menuName != null and menuName != ''">
+                AND m.menu_name like concat('%', #{menuName}, '%')
+            </if>
+            <if test="visible != null and visible != ''">
+                AND m.visible = #{visible}
+            </if>
+            <if test="status != null and status != ''">
+                AND m.status = #{status}
+            </if>
+        </where>
+        order by m.parent_id, m.order_num
+    </select>
     <select id="selectMenuTreeAll" resultMap="SysMenuResult">
         select distinct m.menu_id, m.parent_id, m.menu_name, m.path, m.component, m.`query`, m.visible, m.status, ifnull(m.perms,'') as perms, m.is_frame, m.is_cache, m.menu_type, m.icon, m.order_num, m.create_time
         from sys_menu m where m.menu_type in ('M', 'C') and m.status = 0

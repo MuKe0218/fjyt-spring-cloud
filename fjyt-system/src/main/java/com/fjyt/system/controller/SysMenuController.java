@@ -24,6 +24,15 @@ public class SysMenuController {
     private ISysMenuService sysMenuService;
 
     /**
+     * 获取菜单列表
+     */
+    @GetMapping("/list")
+    public R list(SysMenu menu){
+        Long userId = SecurityUtils.getUserId();
+        List<SysMenu> menus = sysMenuService.selectMenuList(menu, userId);
+        return R.ok(menus);
+    }
+    /**
      * 获取路由信息
      *
      * @return 路由信息

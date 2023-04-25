@@ -1,5 +1,6 @@
 package com.fjyt.system.pojo.DO;
 
+import com.fjyt.common.domain.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,8 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SysMenu implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class SysMenu extends BaseEntity {
 
     /** 菜单ID */
     private Long menuId;

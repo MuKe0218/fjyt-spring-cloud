@@ -25,4 +25,12 @@ public interface ISysMenuService {
      * @return 路由列表
      */
     public List<RouterVo> buildMenus(List<SysMenu> menus);
+    /**
+     * 根据用户查询系统菜单列表
+     *
+     * @param menu 菜单信息
+     * @param userId 用户ID
+     * @return 菜单列表
+     */
+    public List<SysMenu> selectMenuList(SysMenu menu, Long userId);
 }
