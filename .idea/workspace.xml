@@ -23,16 +23,7 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysMenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/pojo/DO/SysMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/pojo/DO/SysMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/SysMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysMenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysMenuMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -93,7 +84,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RuoYi-Cloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -203,7 +194,7 @@
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
-      <workItem from="1682294544439" duration="14464000" />
+      <workItem from="1682294544439" duration="18115000" />
     </task>
     <servers />
   </component>
