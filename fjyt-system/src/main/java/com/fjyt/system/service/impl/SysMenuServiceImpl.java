@@ -112,9 +112,8 @@ public class SysMenuServiceImpl implements ISysMenuService {
     @Override
     public List<SysMenu> selectMenuList(SysMenu menu, Long userId) {
         List<SysMenu> menuList = null;
-        System.out.println(userId);
         // 管理员显示所有菜单信息
-        if (SysUser.isAdmin(userId))
+        if (SysUser.isAdmin(userId))    
         {
             menuList = menuMapper.selectMenuList(menu);
         }
@@ -124,6 +123,74 @@ public class SysMenuServiceImpl implements ISysMenuService {
             menuList = menuMapper.selectMenuListByUserId(menu);
         }
         return menuList;
+    }
+    /**
+     * 根据菜单ID查询信息
+     *
+     * @param menuId 菜单ID
+     * @return 菜单信息
+     */
+    @Override
+    public SysMenu selectMenuById(Long menuId) {
+        return menuMapper.selectMenuById(menuId);
+    }
+    /**
+     * 是否存在菜单子节点
+     *
+     * @param menuId 菜单ID
+     * @return 结果
+     */
+    @Override
+    public boolean hasChildByMenuId(Long menuId) {
+        int result = menuMapper.hasChildByMenuId(menuId);
+        return result > 0;
+    }
+
+    /**
+     * 校验菜单名称是否唯一
+     *
+     * @param menu 菜单信息
+     * @return 结果
+     */
+    @Override
+    public boolean checkMenuNameUnique(SysMenu menu) {
+        Long menuId = StringUtils.isNull(menu.getMenuId()) ? -1L : menu.getMenuId();
+        SysMenu info = menuMapper.checkMenuNameUnique(menu.getMenuName(), menu.getParentId());
+        if (StringUtils.isNotNull(info) && info.getMenuId().longValue() != menuId.longValue())
+        {
+            return UserConstants.NOT_UNIQUE;
+        }
+        return UserConstants.UNIQUE;
+    }
+    /**
+     * 新增保存菜单信息
+     *
+     * @param menu 菜单信息
+     * @return 结果
+     */
+    @Override
+    public int insertMenu(SysMenu menu) {
+        return menuMapper.insertMenu(menu);
+    }
+    /**
+     * 修改保存菜单信息
+     *
+     * @param menu 菜单信息
+     * @return 结果
+     */
+    @Override
+    public int updateMenu(SysMenu menu) {
+        return menuMapper.updateMenu(menu);
+    }
+    /**
+     * 删除菜单管理信息
+     *
+     * @param menuId 菜单ID
+     * @return 结果
+     */
+    @Override
+    public int deleteMenuById(Long menuId) {
+        return menuMapper.deleteMenuById(menuId);
     }
 
     /**
