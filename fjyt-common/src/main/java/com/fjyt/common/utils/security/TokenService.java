@@ -1,7 +1,7 @@
 package com.fjyt.common.utils.security;
 
 import com.fjyt.common.utils.StringUtils;
-import com.fjyt.common.domain.LoginUserBo;
+import com.fjyt.common.domain.LoginUser;
 import com.fjyt.common.constant.CacheConstants;
 import com.fjyt.common.constant.SecurityConstants;
 import com.fjyt.common.redis.service.RedisService;
@@ -26,13 +26,14 @@ public class TokenService {
     protected static final long MILLIS_MINUTE = 60 * MILLIS_SECOND;
     private final static long expireTime = CacheConstants.EXPIRATION;
     private final static String ACCESS_TOKEN = CacheConstants.LOGIN_TOKEN_KEY;
+    private final static Long MILLIS_MINUTE_TEN = CacheConstants.REFRESH_TIME * MILLIS_MINUTE;
 
     @Autowired
     private RedisService redisService;
     /**
      * 创建令牌
      */
-    public Map<String, Object> createToken(LoginUserBo loginUser) {
+    public Map<String, Object> createToken(LoginUser loginUser) {
         String token = IdUtils.fastUUID();
         Long userId = loginUser.getSysUser().getUserId();
         String userName = loginUser.getUsername();
@@ -70,7 +71,7 @@ public class TokenService {
      *
      * @param loginUser 登录信息
      */
-    public void refreshToken(LoginUserBo loginUser)
+    public void refreshToken(LoginUser loginUser)
     {
         loginUser.setLoginTime(System.currentTimeMillis());
         loginUser.setExpireTime(loginUser.getLoginTime() + expireTime * MILLIS_MINUTE);
@@ -81,5 +82,42 @@ public class TokenService {
     private String getTokenKey(String token)
     {
         return ACCESS_TOKEN + token;
+    }
+
+    /**
+     * 获取用户身份信息
+     *
+     * @return 用户信息
+     */
+    public LoginUser getLoginUser(String token)
+    {
+        LoginUser user = null;
+        try
+        {
+            if (StringUtils.isNotEmpty(token))
+            {
+                String userkey = JwtUtils.getUserKey(token);
+                user = redisService.getCacheObject(getTokenKey(userkey));
+                return user;
+            }
+        }
+        catch (Exception e)
+        {
+        }
+        return user;
+    }
+    /**
+     * 验证令牌有效期，相差不足120分钟，自动刷新缓存
+     *
+     * @param loginUser
+     */
+    public void verifyToken(LoginUser loginUser)
+    {
+        long expireTime = loginUser.getExpireTime();
+        long currentTime = System.currentTimeMillis();
+        if (expireTime - currentTime <= MILLIS_MINUTE_TEN)
+        {
+            refreshToken(loginUser);
+        }
     }
 }

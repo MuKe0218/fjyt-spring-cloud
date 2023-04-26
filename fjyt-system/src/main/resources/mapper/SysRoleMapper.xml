@@ -119,4 +119,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{roleId}
 		</foreach>
 	</delete>
+
+	<select id="selectRolePermissionByUserId" parameterType="Long" resultMap="SysRoleResult">
+		<include refid="selectRoleVo"/>
+		WHERE r.del_flag = '0' and ur.user_id = #{userId}
+	</select>
+
 </mapper> 

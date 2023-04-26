@@ -1,5 +1,7 @@
 package com.fjyt.common.utils.security;
 
+import com.fjyt.common.domain.LoginUser;
+
 /**
  * @author keQiLong
  * @date 2023年04月23日 14:54
@@ -36,27 +38,27 @@ public class AuthUtil {
 //    {
 //        authLogic.checkLogin();
 //    }
-//
-//    /**
-//     * 获取当前登录用户信息
-//     *
-//     * @param token 指定token
-//     * @return 用户信息
-//     */
-//    public static LoginUser getLoginUser(String token)
-//    {
-//        return authLogic.getLoginUser(token);
-//    }
-//
-//    /**
-//     * 验证当前用户有效期
-//     *
-//     * @param loginUser 用户信息
-//     */
-//    public static void verifyLoginUserExpire(LoginUser loginUser)
-//    {
-//        authLogic.verifyLoginUserExpire(loginUser);
-//    }
+
+    /**
+     * 获取当前登录用户信息
+     *
+     * @param token 指定token
+     * @return 用户信息
+     */
+    public static LoginUser getLoginUser(String token)
+    {
+        return authLogic.getLoginUser(token);
+    }
+
+    /**
+     * 验证当前用户有效期
+     *
+     * @param loginUser 用户信息
+     */
+    public static void verifyLoginUserExpire(LoginUser loginUser)
+    {
+        authLogic.verifyLoginUserExpire(loginUser);
+    }
 //
 //    /**
 //     * 当前账号是否含有指定角色标识, 返回true或false

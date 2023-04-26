@@ -1,7 +1,7 @@
 package com.fjyt.system.api;
 
 import com.fjyt.system.factory.RemoteUserFallbackFactory;
-import com.fjyt.common.domain.LoginUserBo;
+import com.fjyt.common.domain.LoginUser;
 import com.fjyt.common.constant.SecurityConstants;
 import com.fjyt.common.constant.ServiceNameConstants;
 import com.fjyt.common.domain.R;
@@ -25,5 +25,5 @@ public interface RemoteUserService {
      * @return 结果
      */
     @GetMapping("/user/info/{username}")
-    public R<LoginUserBo> getUserInfo(@PathVariable("username") String username, @RequestHeader(SecurityConstants.FROM_SOURCE) String source);
+    public R<LoginUser> getUserInfo(@PathVariable("username") String username, @RequestHeader(SecurityConstants.FROM_SOURCE) String source);
 }

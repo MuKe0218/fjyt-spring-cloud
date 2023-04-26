@@ -5,7 +5,7 @@ import com.fjyt.common.utils.JwtUtils;
 import com.fjyt.common.utils.security.AuthUtil;
 import com.fjyt.common.utils.security.SecurityUtils;
 import com.fjyt.common.utils.StringUtils;
-import com.fjyt.common.domain.LoginUserBo;
+import com.fjyt.common.domain.LoginUser;
 import com.fjyt.auth.service.SysLoginService;
 import com.fjyt.common.utils.security.TokenService;
 import com.fjyt.common.domain.R;
@@ -34,7 +34,7 @@ public class TokenController {
     //登录
     @PostMapping("/login")
     public R login(@RequestBody LoginDto loginDto){
-        LoginUserBo loginUserBo = sysLoginService.login(loginDto.getUsername(),loginDto.getPassword());
+        LoginUser loginUserBo = sysLoginService.login(loginDto.getUsername(),loginDto.getPassword());
         kapchaService.checkCaptcha(loginDto.getUuid(),loginDto.getCode());
         return R.ok(tokenService.createToken(loginUserBo),"生成token成功");
     }

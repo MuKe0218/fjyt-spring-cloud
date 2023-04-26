@@ -3,6 +3,7 @@ package com.fjyt.system.service;
 import com.fjyt.common.domain.SysRole;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author keQiLong
@@ -84,4 +85,11 @@ public interface ISysRoleService {
      * @return 结果
      */
     public int deleteRoleByIds(Long[] roleIds);
+    /**
+     * 根据用户ID查询角色权限
+     *
+     * @param userId 用户ID
+     * @return 权限列表
+     */
+    public Set<String> selectRolePermissionByUserId(Long userId);
 }

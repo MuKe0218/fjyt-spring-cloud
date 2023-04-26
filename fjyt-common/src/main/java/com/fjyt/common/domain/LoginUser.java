@@ -10,7 +10,7 @@ import java.util.Set;
  * @date 2023年04月20日 15:38
  */
 @Data
-public class LoginUserBo implements Serializable {
+public class LoginUser implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**

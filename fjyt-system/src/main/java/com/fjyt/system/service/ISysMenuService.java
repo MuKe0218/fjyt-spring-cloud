@@ -5,6 +5,7 @@ import com.fjyt.system.pojo.VO.RouterVo;
 import com.fjyt.system.pojo.VO.TreeSelect;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author keQiLong
@@ -105,4 +106,18 @@ public interface ISysMenuService {
      * @return 结果
      */
     public int deleteMenuById(Long menuId);
+    /**
+     * 根据角色ID查询权限
+     *
+     * @param roleId 角色ID
+     * @return 权限列表
+     */
+    public Set<String> selectMenuPermsByRoleId(Long roleId);
+    /**
+     * 根据用户ID查询权限
+     *
+     * @param userId 用户ID
+     * @return 权限列表
+     */
+    public Set<String> selectMenuPermsByUserId(Long userId);
 }

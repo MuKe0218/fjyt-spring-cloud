@@ -1,6 +1,6 @@
 package com.fjyt.system.factory;
 
-import com.fjyt.common.domain.LoginUserBo;
+import com.fjyt.common.domain.LoginUser;
 import com.fjyt.common.domain.R;
 import com.fjyt.system.api.RemoteUserService;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ public class RemoteUserFallbackFactory implements FallbackFactory<RemoteUserServ
         return new RemoteUserService()
         {
             @Override
-            public R<LoginUserBo> getUserInfo(String username, String source)
+            public R<LoginUser> getUserInfo(String username, String source)
             {
                 return R.fail("获取用户失败:" + throwable.getMessage());
             }

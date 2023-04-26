@@ -1,7 +1,7 @@
 package com.fjyt.auth.service;
 
 import com.fjyt.system.api.RemoteUserService;
-import com.fjyt.common.domain.LoginUserBo;
+import com.fjyt.common.domain.LoginUser;
 import com.fjyt.common.domain.SysUser;
 import com.fjyt.common.constant.CacheConstants;
 import com.fjyt.common.constant.SecurityConstants;
@@ -32,7 +32,7 @@ public class SysLoginService {
     /**
      * 登录
      */
-    public LoginUserBo login(String username, String password)
+    public LoginUser login(String username, String password)
     {
         // 用户名或密码为空 错误
         if (StringUtils.isAnyBlank(username, password))
@@ -62,7 +62,7 @@ public class SysLoginService {
             throw new ServiceException("很遗憾，访问IP已被列入系统黑名单");
         }
         // 查询用户信息
-        R<LoginUserBo> userResult = remoteUserService.getUserInfo(username, SecurityConstants.INNER);
+        R<LoginUser> userResult = remoteUserService.getUserInfo(username, SecurityConstants.INNER);
         if (StringUtils.isNull(userResult) || StringUtils.isNull(userResult.getData()))
         {
             //recordLogService.recordLogininfor(username, Constants.LOGIN_FAIL, "登录用户不存在");
@@ -75,7 +75,7 @@ public class SysLoginService {
             throw new ServiceException(userResult.getMsg());
         }
 
-        LoginUserBo userInfo = userResult.getData();
+        LoginUser userInfo = userResult.getData();
         SysUser user = userResult.getData().getSysUser();
         if (UserStatus.DELETED.getCode().equals(user.getDelFlag()))
         {
