@@ -201,6 +201,15 @@ public class SysRoleServiceImpl implements ISysRoleService {
         }
         return permsSet;
     }
+    /**
+     * 查询所有角色
+     *
+     * @return 角色列表
+     */
+    @Override
+    public List<SysRole> selectRoleAll() {
+        return selectRoleList(new SysRole());
+    }
 
     /**
      * 新增角色菜单信息

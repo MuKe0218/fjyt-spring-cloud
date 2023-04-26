@@ -79,4 +79,8 @@ public class SysUser extends BaseEntity{
     {
         return userId != null && 1L == userId;
     }
+    public SysUser(Long userId)
+    {
+        this.userId = userId;
+    }
 }

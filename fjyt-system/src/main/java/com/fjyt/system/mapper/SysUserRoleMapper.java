@@ -1,6 +1,9 @@
 package com.fjyt.system.mapper;
 
+import com.fjyt.system.pojo.DO.SysUserRole;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * @author keQiLong
@@ -16,4 +19,25 @@ public interface SysUserRoleMapper {
      * @return 结果
      */
     public int countUserRoleByRoleId(Long roleId);
+    /**
+     * 批量新增用户角色信息
+     *
+     * @param userRoleList 用户角色列表
+     * @return 结果
+     */
+    public int batchUserRole(List<SysUserRole> userRoleList);
+    /**
+     * 通过用户ID删除用户和角色关联
+     *
+     * @param userId 用户ID
+     * @return 结果
+     */
+    public int deleteUserRoleByUserId(Long userId);
+    /**
+     * 批量删除用户和角色关联
+     *
+     * @param ids 需要删除的数据ID
+     * @return 结果
+     */
+    public int deleteUserRole(Long[] ids);
 }

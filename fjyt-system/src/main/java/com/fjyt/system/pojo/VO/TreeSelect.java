@@ -1,6 +1,7 @@
 package com.fjyt.system.pojo.VO;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fjyt.common.domain.SysDept;
 import com.fjyt.system.pojo.DO.SysMenu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,5 +38,10 @@ public class TreeSelect implements Serializable {
         this.label = menu.getMenuName();
         this.children = menu.getChildren().stream().map(TreeSelect::new).collect(Collectors.toList());
     }
-
+    public TreeSelect(SysDept dept)
+    {
+        this.id = dept.getDeptId();
+        this.label = dept.getDeptName();
+        this.children = dept.getChildren().stream().map(TreeSelect::new).collect(Collectors.toList());
+    }
 }
