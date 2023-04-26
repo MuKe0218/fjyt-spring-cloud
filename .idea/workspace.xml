@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -42,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -111,7 +112,7 @@
       <recent name="com.fjyt.system.pojo.BO" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthApplication">
+  <component name="RunManager" selected="Spring Boot.SystemApplication">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -166,8 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.SystemApplication" />
+        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.GateWayApplication" />
       </list>
     </recent_temporary>
@@ -193,7 +194,7 @@
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
-      <workItem from="1682294544439" duration="43927000" />
+      <workItem from="1682294544439" duration="47139000" />
     </task>
     <servers />
   </component>
