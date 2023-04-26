@@ -23,7 +23,8 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysMenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -194,7 +195,7 @@
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
-      <workItem from="1682294544439" duration="47139000" />
+      <workItem from="1682294544439" duration="47856000" />
     </task>
     <servers />
   </component>

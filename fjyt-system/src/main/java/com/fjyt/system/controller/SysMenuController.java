@@ -2,6 +2,8 @@ package com.fjyt.system.controller;
 
 import com.fjyt.common.constant.UserConstants;
 import com.fjyt.common.domain.R;
+import com.fjyt.common.text.Convert;
+import com.fjyt.common.utils.JwtUtils;
 import com.fjyt.common.utils.StringUtils;
 import com.fjyt.common.utils.security.SecurityUtils;
 import com.fjyt.system.pojo.DO.SysMenu;
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -38,8 +41,9 @@ public class SysMenuController {
      * 获取菜单列表
      */
     @GetMapping("/list")
-    public R list(SysMenu menu){
-        Long userId = SecurityUtils.getUserId();
+    public R list(HttpServletRequest request,SysMenu menu){
+        // Long userId = SecurityUtils.getUserId();
+        Long userId = Convert.toLong(JwtUtils.getUserId(SecurityUtils.getToken(request)));
         List<SysMenu> menus = sysMenuService.selectMenuList(menu, userId);
         return R.ok(menus);
     }
@@ -47,9 +51,9 @@ public class SysMenuController {
      * 加载对应角色菜单列表树
      */
     @GetMapping(value = "/roleMenuTreeselect/{roleId}")
-    public Map<String,Object> roleMenuTreeselect(@PathVariable("roleId") Long roleId)
+    public Map<String,Object> roleMenuTreeselect(HttpServletRequest request,@PathVariable("roleId") Long roleId)
     {
-        Long userId = SecurityUtils.getUserId();
+        Long userId = Convert.toLong(JwtUtils.getUserId(SecurityUtils.getToken(request)));
         List<SysMenu> menus = sysMenuService.selectMenuList(userId);
         Map<String,Object> map = new Hashtable<String,Object>();
         map.put("checkedKeys", sysMenuService.selectMenuListByRoleId(roleId));
@@ -60,7 +64,7 @@ public class SysMenuController {
      * 新增菜单
      */
     @PostMapping
-    public R add(@Validated @RequestBody SysMenu menu)
+    public R add(HttpServletRequest request,@Validated @RequestBody SysMenu menu)
     {
         if (!sysMenuService.checkMenuNameUnique(menu))
         {
@@ -70,14 +74,14 @@ public class SysMenuController {
         {
             return R.fail("新增菜单'" + menu.getMenuName() + "'失败，地址必须以http(s)://开头");
         }
-        menu.setCreateBy(SecurityUtils.getUsername());
+        menu.setCreateBy(JwtUtils.getUserName(SecurityUtils.getToken(request)));
         return R.ok(sysMenuService.insertMenu(menu));
     }
     /**
      * 修改菜单
      */
     @PutMapping
-    public R edit(@Validated @RequestBody SysMenu menu)
+    public R edit(HttpServletRequest request,@Validated @RequestBody SysMenu menu)
     {
         if (!sysMenuService.checkMenuNameUnique(menu))
         {
@@ -91,7 +95,7 @@ public class SysMenuController {
         {
             return R.fail("修改菜单'" + menu.getMenuName() + "'失败，上级菜单不能选择自己");
         }
-        menu.setUpdateBy(SecurityUtils.getUsername());
+        menu.setUpdateBy(JwtUtils.getUserName(SecurityUtils.getToken(request)));
         return R.ok(sysMenuService.updateMenu(menu));
     }
     /**
@@ -114,9 +118,9 @@ public class SysMenuController {
      * 获取菜单下拉树列表
      */
     @GetMapping("/treeselect")
-    public R treeselect(SysMenu menu)
+    public R treeselect(HttpServletRequest request,SysMenu menu)
     {
-        Long userId = SecurityUtils.getUserId();
+        Long userId = Convert.toLong(JwtUtils.getUserId(SecurityUtils.getToken(request)));
         List<SysMenu> menus = sysMenuService.selectMenuList(menu, userId);
         return R.ok(sysMenuService.buildMenuTreeSelect(menus));
     }
@@ -127,9 +131,9 @@ public class SysMenuController {
      * @return 路由信息
      */
     @GetMapping("/getRouters")
-    public R getRouters()
+    public R getRouters(HttpServletRequest request)
     {
-        Long userId = SecurityUtils.getUserId();
+        Long userId = Convert.toLong(JwtUtils.getUserId(SecurityUtils.getToken(request)));
         List<SysMenu> menus = sysMenuService.selectMenuTreeByUserId(userId);
         return R.ok(sysMenuService.buildMenus(menus));
     }
