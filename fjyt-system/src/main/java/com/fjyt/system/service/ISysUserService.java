@@ -93,5 +93,12 @@ public interface ISysUserService {
      * @return 结果
      */
     public int updateUserStatus(SysUser user);
+    /**
+     * 重置用户密码
+     *
+     * @param user 用户信息
+     * @return 结果
+     */
+    public int resetPwd(SysUser user);
 
 }

@@ -57,6 +57,7 @@ public class SysUserController {
             SysUser sysUser = userService.selectUserById(userId);
             ajax.put("data", sysUser);
             //ajax.put("postIds", postService.selectPostListByUserId(userId));
+            if (sysUser.getRoleIds() != null)
             ajax.put("roleIds", sysUser.getRoles().stream().map(SysRole::getRoleId).collect(Collectors.toList()));
         }
         return ajax;
@@ -196,5 +197,16 @@ public class SysUserController {
         user.setUpdateBy(SecurityUtils.getUsername());
         return R.ok(userService.updateUserStatus(user));
     }
-
+    /**
+     * 重置密码
+     */
+    @PutMapping("/resetPwd")
+    public R resetPwd(@RequestBody SysUser user)
+    {
+        userService.checkUserAllowed(user);
+        userService.checkUserDataScope(user.getUserId());
+        user.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
+        user.setUpdateBy(SecurityUtils.getUsername());
+        return R.ok(userService.resetPwd(user));
+    }
 }

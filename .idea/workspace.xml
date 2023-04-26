@@ -23,31 +23,15 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/src/main/java/com/fjyt/common/domain/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-common/target/classes/com/fjyt/common/domain/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/target/classes/com/fjyt/common/domain/SysUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysUserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/mapper/SysUserRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/pojo/VO/TreeSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/pojo/VO/TreeSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysDeptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysRoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/ISysUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/ISysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/ISysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/SysDeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/SysDeptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/service/impl/SysRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysUserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysUserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysUserRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/mapper/SysUserRoleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/pojo/VO/TreeSelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/pojo/VO/TreeSelect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysRoleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/ISysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/ISysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysDeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysDeptServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysRoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysUserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysUserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysPermissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/SysPermissionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/mapper/SysRoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -218,7 +202,7 @@
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
-      <workItem from="1682294544439" duration="55031000" />
+      <workItem from="1682294544439" duration="58318000" />
     </task>
     <servers />
   </component>

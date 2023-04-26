@@ -74,6 +74,7 @@ public class ISysUserServiceImpl implements ISysUserService {
      */
     @Override
     public void checkUserDataScope(Long userId) {
+        System.out.println(SecurityUtils.getUserId());
         if (!SysUser.isAdmin(SecurityUtils.getUserId()))
         {
             SysUser user = new SysUser();
@@ -198,6 +199,16 @@ public class ISysUserServiceImpl implements ISysUserService {
      */
     @Override
     public int updateUserStatus(SysUser user) {
+        return sysUserMapper.updateUser(user);
+    }
+    /**
+     * 重置用户密码
+     *
+     * @param user 用户信息
+     * @return 结果
+     */
+    @Override
+    public int resetPwd(SysUser user) {
         return sysUserMapper.updateUser(user);
     }
 
