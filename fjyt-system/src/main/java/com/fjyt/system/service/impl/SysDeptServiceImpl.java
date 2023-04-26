@@ -35,6 +35,17 @@ public class SysDeptServiceImpl implements ISysDeptService {
         return deptMapper.selectDeptList(dept);
     }
     /**
+     * 根据部门ID查询信息
+     *
+     * @param deptId 部门ID
+     * @return 部门信息
+     */
+    @Override
+    public SysDept selectDeptById(Long deptId) {
+        return deptMapper.selectDeptById(deptId);
+    }
+
+    /**
      * 校验部门名称是否唯一
      *
      * @param dept 部门信息
@@ -78,7 +89,7 @@ public class SysDeptServiceImpl implements ISysDeptService {
         {
             SysDept dept = new SysDept();
             dept.setDeptId(deptId);
-            List<SysDept> depts = SpringUtils.getAopProxy(this).selectDeptList(dept);
+            List<SysDept> depts = selectDeptList(dept);
             if (StringUtils.isEmpty(depts))
             {
                 throw new ServiceException("没有权限访问部门数据！");

@@ -6,6 +6,7 @@ import com.fjyt.common.domain.SysDept;
 import com.fjyt.common.utils.StringUtils;
 import com.fjyt.common.utils.security.SecurityUtils;
 import com.fjyt.system.service.ISysDeptService;
+import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +34,27 @@ public class SysDeptController {
         List<SysDept> depts = deptService.selectDeptList(dept);
         return R.ok(depts);
     }
+    /**
+     * 查询部门列表（排除节点）
+     */
+    @GetMapping("/list/exclude/{deptId}")
+    public R excludeChild(@PathVariable(value = "deptId", required = false) Long deptId)
+    {
+        List<SysDept> depts = deptService.selectDeptList(new SysDept());
+        depts.removeIf(d -> d.getDeptId().intValue() == deptId || ArrayUtils.contains(StringUtils.split(d.getAncestors(), ","), deptId + ""));
+        return R.ok(depts);
+    }
+
+    /**
+     * 根据部门编号获取详细信息
+     */
+    @GetMapping(value = "/{deptId}")
+    public R getInfo(@PathVariable Long deptId)
+    {
+        deptService.checkDeptDataScope(deptId);
+        return R.ok(deptService.selectDeptById(deptId));
+    }
+
     /**
      * 新增部门
      */
