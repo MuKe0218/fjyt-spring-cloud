@@ -5,6 +5,7 @@ import com.fjyt.common.constant.UserConstants;
 import com.fjyt.common.domain.SysRole;
 import com.fjyt.common.domain.SysUser;
 import com.fjyt.common.utils.StringUtils;
+import com.fjyt.common.utils.security.SecurityUtils;
 import com.fjyt.system.mapper.SysMenuMapper;
 import com.fjyt.system.mapper.SysRoleMapper;
 import com.fjyt.system.pojo.DO.SysMenu;
@@ -38,15 +39,14 @@ public class SysMenuServiceImpl implements ISysMenuService {
     @Override
     public List<SysMenu> selectMenuTreeByUserId(Long userId) {
         List<SysMenu> menus = null;
-//        if (SecurityUtils.isAdmin(userId))
-//        {
-//            menus = menuMapper.selectMenuTreeAll();
-//        }
-//        else
-//        {
-//            menus = menuMapper.selectMenuTreeByUserId(userId);
-//        }
-        menus = menuMapper.selectMenuTreeAll();
+        if (SecurityUtils.isAdmin(userId))
+        {
+            menus = menuMapper.selectMenuTreeAll();
+        }
+        else
+        {
+            menus = menuMapper.selectMenuTreeByUserId(userId);
+        }
         return getChildPerms(menus, 0);
     }
     /**
