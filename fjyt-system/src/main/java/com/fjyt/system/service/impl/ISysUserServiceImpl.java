@@ -211,6 +211,27 @@ public class ISysUserServiceImpl implements ISysUserService {
     public int resetPwd(SysUser user) {
         return sysUserMapper.updateUser(user);
     }
+    /**
+     * 修改用户基本信息
+     *
+     * @param user 用户信息
+     * @return 结果
+     */
+    @Override
+    public int updateUserProfile(SysUser user) {
+        return sysUserMapper.updateUser(user);
+    }
+    /**
+     * 重置用户密码
+     *
+     * @param userName 用户名
+     * @param password 密码
+     * @return 结果
+     */
+    @Override
+    public int resetUserPwd(String userName, String password) {
+        return sysUserMapper.resetUserPwd(userName, password);
+    }
 
     public void insertUserRole(SysUser user){
         Long userId = user.getUserId();

@@ -100,5 +100,20 @@ public interface ISysUserService {
      * @return 结果
      */
     public int resetPwd(SysUser user);
+    /**
+     * 修改用户基本信息
+     *
+     * @param user 用户信息
+     * @return 结果
+     */
+    public int updateUserProfile(SysUser user);
+    /**
+     * 重置用户密码
+     *
+     * @param userName 用户名
+     * @param password 密码
+     * @return 结果
+     */
+    public int resetUserPwd(String userName, String password);
 
 }

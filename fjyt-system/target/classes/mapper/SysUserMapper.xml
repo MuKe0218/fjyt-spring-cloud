@@ -145,4 +145,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             #{userId}
         </foreach>
     </delete>
+
+    <update id="resetUserPwd" parameterType="com.fjyt.common.domain.SysUser">
+        update sys_user set password = #{password} where user_name = #{userName}
+    </update>
+
 </mapper> 

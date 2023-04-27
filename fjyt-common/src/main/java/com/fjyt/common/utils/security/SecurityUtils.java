@@ -3,6 +3,7 @@ package com.fjyt.common.utils.security;
 import com.fjyt.common.constant.SecurityConstants;
 import com.fjyt.common.constant.TokenConstants;
 import com.fjyt.common.context.SecurityContextHolder;
+import com.fjyt.common.domain.LoginUser;
 import com.fjyt.common.utils.ServletUtils;
 import com.fjyt.common.utils.StringUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -42,10 +43,10 @@ public class SecurityUtils {
     /**
      * 获取登录用户信息
      */
-//    public static LoginUser getLoginUser()
-//    {
-//        return SecurityContextHolder.get(SecurityConstants.LOGIN_USER, LoginUser.class);
-//    }
+    public static LoginUser getLoginUser()
+    {
+        return SecurityContextHolder.get(SecurityConstants.LOGIN_USER, LoginUser.class);
+    }
 
     /**
      * 获取请求token

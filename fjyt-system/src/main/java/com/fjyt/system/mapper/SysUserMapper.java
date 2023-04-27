@@ -2,6 +2,7 @@ package com.fjyt.system.mapper;
 
 import com.fjyt.common.domain.SysUser;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -76,4 +77,12 @@ public interface SysUserMapper {
      * @return 结果
      */
     public int deleteUserByIds(Long[] userIds);
+    /**
+     * 重置用户密码
+     *
+     * @param userName 用户名
+     * @param password 密码
+     * @return 结果
+     */
+    public int resetUserPwd(@Param("userName") String userName, @Param("password") String password);
 }

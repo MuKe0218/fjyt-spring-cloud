@@ -36,7 +36,7 @@ public class TokenService {
     public Map<String, Object> createToken(LoginUser loginUser) {
         String token = IdUtils.fastUUID();
         Long userId = loginUser.getSysUser().getUserId();
-        String userName = loginUser.getUsername();
+        String userName = loginUser.getSysUser().getUserName();
         loginUser.setToken(token);
         loginUser.setUserid(userId);
         loginUser.setUsername(userName);
@@ -116,6 +116,16 @@ public class TokenService {
         long expireTime = loginUser.getExpireTime();
         long currentTime = System.currentTimeMillis();
         if (expireTime - currentTime <= MILLIS_MINUTE_TEN)
+        {
+            refreshToken(loginUser);
+        }
+    }
+    /**
+     * 设置用户身份信息
+     */
+    public void setLoginUser(LoginUser loginUser)
+    {
+        if (StringUtils.isNotNull(loginUser) && StringUtils.isNotEmpty(loginUser.getToken()))
         {
             refreshToken(loginUser);
         }
