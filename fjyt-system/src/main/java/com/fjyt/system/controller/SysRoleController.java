@@ -3,6 +3,7 @@ package com.fjyt.system.controller;
 import com.fjyt.common.domain.R;
 import com.fjyt.common.domain.SysRole;
 import com.fjyt.common.domain.TableDataInfo;
+import com.fjyt.common.utils.ExcelUtil;
 import com.fjyt.common.utils.security.SecurityUtils;
 import com.fjyt.system.service.ISysRoleService;
 import com.github.pagehelper.PageHelper;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -102,5 +104,15 @@ public class SysRoleController {
     public R remove(@PathVariable Long[] roleIds)
     {
         return R.ok(roleService.deleteRoleByIds(roleIds));
+    }
+    /**
+     * 导出
+     */
+    @PostMapping("/export")
+    public void export(HttpServletResponse response, SysRole role)
+    {
+        List<SysRole> list = roleService.selectRoleList(role);
+        ExcelUtil<SysRole> util = new ExcelUtil<SysRole>(SysRole.class);
+        util.exportExcel(response, list, "角色数据");
     }
 }
