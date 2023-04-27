@@ -16,9 +16,11 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -223,5 +225,34 @@ public class SysUserController {
         List<SysUser> list = userService.selectUserList(user);
         ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
         util.exportExcel(response, list, "用户数据");
+    }
+
+    /**
+     * 导入模板
+     * @param response
+     * @throws IOException
+     */
+    @PostMapping("/importTemplate")
+    public void importTemplate(HttpServletResponse response) throws IOException
+    {
+        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
+        util.importTemplateExcel(response, "用户数据");
+    }
+
+    /**
+     * 导入用户
+     * @param file
+     * @param updateSupport
+     * @return
+     * @throws Exception
+     */
+    @PostMapping("/importData")
+    public R importData(MultipartFile file, boolean updateSupport) throws Exception
+    {
+        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
+        List<SysUser> userList = util.importExcel(file.getInputStream());
+        String operName = SecurityUtils.getUsername();
+        String message = userService.importUser(userList, updateSupport, operName);
+        return R.ok(message);
     }
 }
