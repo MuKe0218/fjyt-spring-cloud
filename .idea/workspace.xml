@@ -23,6 +23,9 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/java/com/fjyt/system/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysUserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
@@ -42,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -193,7 +197,7 @@
       <workItem from="1682216251174" duration="11181000" />
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
-      <workItem from="1682294544439" duration="66665000" />
+      <workItem from="1682294544439" duration="70361000" />
     </task>
     <servers />
   </component>

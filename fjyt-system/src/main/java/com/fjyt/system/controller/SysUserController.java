@@ -2,6 +2,7 @@ package com.fjyt.system.controller;
 
 import com.fjyt.common.domain.*;
 import com.fjyt.common.text.Convert;
+import com.fjyt.common.utils.ExcelUtil;
 import com.fjyt.common.utils.JwtUtils;
 import com.fjyt.common.utils.StringUtils;
 import com.fjyt.common.utils.security.SecurityUtils;
@@ -17,6 +18,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -208,5 +210,18 @@ public class SysUserController {
         user.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
         user.setUpdateBy(SecurityUtils.getUsername());
         return R.ok(userService.resetPwd(user));
+    }
+
+    /**
+     * 导出
+     * @param response
+     * @param user
+     */
+    @PostMapping("/export")
+    public void export(HttpServletResponse response, SysUser user)
+    {
+        List<SysUser> list = userService.selectUserList(user);
+        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
+        util.exportExcel(response, list, "用户数据");
     }
 }
