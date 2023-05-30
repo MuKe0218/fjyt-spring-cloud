@@ -23,11 +23,17 @@
       <change beforePath="$PROJECT_DIR$/../config/dev.env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-auth/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-auth/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-auth/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-gateway/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-gateway/target/classes/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fjyt-gateway/target/classes/com/fjyt/gateway/GateWayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-gateway/target/classes/com/fjyt/gateway/GateWayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/ISysUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/ISysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/com/fjyt/system/service/impl/ISysUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fjyt-system/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fjyt-system/target/classes/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
@@ -75,6 +81,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
   <component name="ProjectId" id="2OPVm0LZL5GL49LEICijzJHgIUY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -82,6 +91,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -90,7 +100,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RuoYi-Cloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fjyt-asset-management" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -98,7 +108,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -118,18 +128,14 @@
       <recent name="com.fjyt.system.pojo.BO" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GateWayApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SystemApplication">
     <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="fjyt-auth" />
       <extension name="coverage">
@@ -139,11 +145,14 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fjyt.auth.AuthApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx64m -Xms64m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="fjyt-gateway" />
       <extension name="coverage">
         <pattern>
@@ -152,6 +161,9 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fjyt.gateway.GateWayApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx64m -Xms64m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,13 +177,20 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fjyt.system.SystemApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx64m -Xms64m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.GateWayApplication" />
+      <item itemvalue="Spring Boot.AuthApplication" />
+      <item itemvalue="Spring Boot.SystemApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GateWayApplication" />
         <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.SystemApplication" />
       </list>
@@ -199,7 +218,31 @@
       <workItem from="1682236133467" duration="418000" />
       <workItem from="1682236573609" duration="12306000" />
       <workItem from="1682294544439" duration="84371000" />
-      <workItem from="1682641733553" duration="2916000" />
+      <workItem from="1682641733553" duration="9949000" />
+      <workItem from="1683160161828" duration="12153000" />
+      <workItem from="1683246273779" duration="9864000" />
+      <workItem from="1683332691678" duration="2073000" />
+      <workItem from="1683505609044" duration="2932000" />
+      <workItem from="1683593236229" duration="5014000" />
+      <workItem from="1683678243534" duration="3620000" />
+      <workItem from="1683764991646" duration="5802000" />
+      <workItem from="1683850942806" duration="3664000" />
+      <workItem from="1683889175547" duration="819000" />
+      <workItem from="1684109882803" duration="1263000" />
+      <workItem from="1684196758316" duration="3679000" />
+      <workItem from="1684369295670" duration="2689000" />
+      <workItem from="1684455993491" duration="2986000" />
+      <workItem from="1684715161053" duration="4285000" />
+      <workItem from="1684888017147" duration="2947000" />
+      <workItem from="1684921193941" duration="629000" />
+      <workItem from="1684921880235" duration="593000" />
+      <workItem from="1684974555524" duration="601000" />
+      <workItem from="1684996788214" duration="6298000" />
+      <workItem from="1685060961187" duration="9830000" />
+      <workItem from="1685072927329" duration="593000" />
+      <workItem from="1685323649969" duration="4746000" />
+      <workItem from="1685350571963" duration="1159000" />
+      <workItem from="1685405968302" duration="1081000" />
     </task>
     <servers />
   </component>
@@ -232,5 +275,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fjyt_spring_cloud$SystemApplication.ic" NAME="SystemApplication Coverage Results" MODIFIED="1684715235990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.fjyt.system.*</FILTER>
+    </SUITE>
   </component>
 </project>

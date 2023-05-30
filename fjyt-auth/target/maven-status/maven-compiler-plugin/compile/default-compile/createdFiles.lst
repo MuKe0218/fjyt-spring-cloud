@@ -1,0 +1,4 @@
+com\fjyt\auth\AuthApplication.class
+com\fjyt\auth\controller\TokenController.class
+com\fjyt\auth\service\SysLoginService.class
+com\fjyt\auth\service\SysPasswordService.class
